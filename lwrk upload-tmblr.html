@@ -6532,6 +6532,83 @@ les doux rêves AW19
     <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/modal.js"></script>
     <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/menudrop.js"></script>
 
+  <script>
+console.log("working accordion tesenv4");
+
+// this one toggles only one open at a time
+// Ref  - http://stackoverflow.com/questions/37745154/only-open-one-accordion-tab-at-one-time
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var acc = document.getElementsByClassName("accordion");
+  var panel = document.getElementsByClassName("panel");
+
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+      var setClasses = !this.classList.contains("active");
+      setClass(acc, "active", "remove");
+      setClass(panel, "show", "remove");
+
+      if (setClasses) {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+      }
+    };
+  }
+
+  function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList[fnName](className);
+    }
+  }
+});
+
+// acoordion sub
+
+
+  </script>
+
+  <script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+  </script>
+
+  <script>
+
+// acco sub
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var acc = document.getElementsByClassName("accordionsub");
+  var panel = document.getElementsByClassName("panelsub");
+
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+      var setClasses = !this.classList.contains("active");
+      setClass(acc, "active", "remove");
+      setClass(panel, "show", "remove");
+
+      if (setClasses) {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+      }
+    };
+  }
+
+  function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList[fnName](className);
+    }
+  }
+});
+
+
+  </script>
+
 </body>
 
 </html>
