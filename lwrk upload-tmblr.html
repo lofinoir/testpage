@@ -1,3 +1,209 @@
+
+
+
+
+
+
+
+//message for Tumblr support team:  on the pages I will use these code blocks / some inline and some linked to a github repository and some one is the jquery.min.js from googleapis 
+
+
+//the full code and structure of the page is below so you can see the places the javascript is inserted and what the gihtub linked scripts are
+
+
+ <script>
+        //Get the button
+        var mybutton = document.getElementById("myBtn");
+
+        // When the user scrolls down 20px from the top of the document, show the button
+        window.onscroll = function () { scrollFunction() };
+
+        function scrollFunction() {
+          if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+            mybutton.style.display = "block";
+          } else {
+            mybutton.style.display = "none";
+          }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+          document.body.scrollTop = 0;
+          document.documentElement.scrollTop = 0;
+        }
+      </script>
+
+      <!-- End page content -->
+    </div>
+    <!-- !PAGE CONTENT END====================! -->
+    <!-- Script to open and close sidebar -->
+    <script>
+      // Script to open and close sidebar
+      function w3_open() {
+        document.getElementById("mySidebar").style.display = "block";
+        document.getElementById("myOverlay").style.display = "block";
+      }
+
+      function w3_close() {
+        document.getElementById("mySidebar").style.display = "none";
+        document.getElementById("myOverlay").style.display = "none";
+      }
+
+      // Modal Image Gallery
+      function onClick(element) {
+        document.getElementById("img01").src = element.src;
+        document.getElementById("modal01").style.display = "block";
+        var captionText = document.getElementById("caption");
+        captionText.innerHTML = element.alt;
+      }
+
+
+
+    </script>
+
+    <!-- form script -->
+    <script>
+      var form = document.getElementById("my-form");
+
+      async function handleSubmit(event) {
+        event.preventDefault();
+        var status = document.getElementById("my-form-status");
+        var data = new FormData(event.target);
+        fetch(event.target.action, {
+          method: form.method,
+          body: data,
+          headers: {
+            'Accept': 'application/json'
+          }
+        }).then(response => {
+          status.innerHTML = "Thanks for your submission!";
+          form.reset()
+        }).catch(error => {
+          status.innerHTML = "Oops! There was a problem submitting your form"
+        });
+      }
+      form.addEventListener("submit", handleSubmit)
+    </script>
+
+    <script>
+      $(document).bind("contextmenu", function (e) {
+        return false;
+      });
+    </script>
+
+    <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/accoscript 10.js"></script>
+    <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/subacco.js"></script>
+    <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/modal.js"></script>
+    <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/menudrop.js"></script>
+
+  <script>
+console.log("working accordion tesenv4");
+
+// a message to Tumblr Support:  the final page will link to the above scripts, however only on this github page I have pasted the code below
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var acc = document.getElementsByClassName("accordion");
+  var panel = document.getElementsByClassName("panel");
+
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+      var setClasses = !this.classList.contains("active");
+      setClass(acc, "active", "remove");
+      setClass(panel, "show", "remove");
+
+      if (setClasses) {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+      }
+    };
+  }
+
+  function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList[fnName](className);
+    }
+  }
+});
+
+// acoordion sub
+
+
+  </script>
+
+  <script>
+// Modal Image Gallery
+function onClick(element) {
+  document.getElementById("img01").src = element.src;
+  document.getElementById("modal01").style.display = "block";
+  var captionText = document.getElementById("caption");
+  captionText.innerHTML = element.alt;
+}
+
+  </script>
+
+  <script>
+
+// acco sub
+
+document.addEventListener("DOMContentLoaded", function (event) {
+  var acc = document.getElementsByClassName("accordionsub");
+  var panel = document.getElementsByClassName("panelsub");
+
+  for (var i = 0; i < acc.length; i++) {
+    acc[i].onclick = function () {
+      var setClasses = !this.classList.contains("active");
+      setClass(acc, "active", "remove");
+      setClass(panel, "show", "remove");
+
+      if (setClasses) {
+        this.classList.toggle("active");
+        this.nextElementSibling.classList.toggle("show");
+      }
+    };
+  }
+
+  function setClass(els, className, fnName) {
+    for (var i = 0; i < els.length; i++) {
+      els[i].classList[fnName](className);
+    }
+  }
+});
+
+
+  </script>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+==============================full page structure is below============================================
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 <!DOCTYPE html>
 <html lang="en">
 
@@ -6532,81 +6738,10 @@ les doux rêves AW19
     <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/modal.js"></script>
     <script type="text/javascript" src="https://lofinoir.github.io/themeset/apps/menudrop.js"></script>
 
-  <script>
-console.log("working accordion tesenv4");
-
-// a message to Tumblr Support:  the final page will link to the above scripts, however only on this github page I have pasted the code below
-
-document.addEventListener("DOMContentLoaded", function (event) {
-  var acc = document.getElementsByClassName("accordion");
-  var panel = document.getElementsByClassName("panel");
-
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-      var setClasses = !this.classList.contains("active");
-      setClass(acc, "active", "remove");
-      setClass(panel, "show", "remove");
-
-      if (setClasses) {
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-      }
-    };
-  }
-
-  function setClass(els, className, fnName) {
-    for (var i = 0; i < els.length; i++) {
-      els[i].classList[fnName](className);
-    }
-  }
-});
-
-// acoordion sub
 
 
-  </script>
-
-  <script>
-// Modal Image Gallery
-function onClick(element) {
-  document.getElementById("img01").src = element.src;
-  document.getElementById("modal01").style.display = "block";
-  var captionText = document.getElementById("caption");
-  captionText.innerHTML = element.alt;
-}
-
-  </script>
-
-  <script>
-
-// acco sub
-
-document.addEventListener("DOMContentLoaded", function (event) {
-  var acc = document.getElementsByClassName("accordionsub");
-  var panel = document.getElementsByClassName("panelsub");
-
-  for (var i = 0; i < acc.length; i++) {
-    acc[i].onclick = function () {
-      var setClasses = !this.classList.contains("active");
-      setClass(acc, "active", "remove");
-      setClass(panel, "show", "remove");
-
-      if (setClasses) {
-        this.classList.toggle("active");
-        this.nextElementSibling.classList.toggle("show");
-      }
-    };
-  }
-
-  function setClass(els, className, fnName) {
-    for (var i = 0; i < els.length; i++) {
-      els[i].classList[fnName](className);
-    }
-  }
-});
 
 
-  </script>
 
 </body>
 
